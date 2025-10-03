@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\mathe\AppData\Local\Temp\testng-eclipse-887902871\testng-customsuite.xml</span>
+                    <span>C:\Users\mathe\AppData\Local\Temp\testng-eclipse-2035816464\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -129,9 +129,13 @@
                   <a name="verifyLoginWithValidUserNameInvalidPassword">
                   </a> <!-- verifyLoginWithValidUserNameInvalidPassword -->
                   <span class="method-name">verifyLoginWithValidUserNameInvalidPassword</span>
-                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;org.apache.poi.xssf.usermodel.XSSFRow.getCell(int)&quot; because &quot;r&quot; is null
-	at utilities.ExcelUtility.getStringData(ExcelUtility.java:24)
-	at testScripts.LoginTest.verifyLoginWithValidUserNameInvalidPassword(LoginTest.java:28)
+                  <div class="stack-trace">java.lang.AssertionError: User was able to login with Invalid credentials expected [7rmart supermarke] but found [7rmart supermarket]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at testScripts.LoginTest.verifyLoginWithValidUserNameInvalidPassword(LoginTest.java:39)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -167,7 +171,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\mathe\AppData\Local\Temp\testng-eclipse-887902871\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\mathe\AppData\Local\Temp\testng-eclipse-2035816464\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -224,12 +228,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'verifyLoginWithValidUserNameInvalidPassword')
 data.setCell(0, 2, 'testScripts.LoginTest')
-data.setCell(0, 3, 1002);
+data.setCell(0, 3, 2108);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 seconds</span>
+              <span class="suite-total-time">Total running time: 2 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -275,11 +279,11 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">verifyLoginWithValidUserNameInvalidPassword</span>
-                <span class="method-start">4426 ms</span>
+                <span class="method-start">4127 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">driverQuit([TestResult name=verifyLoginWithValidUserNameInvalidPassword status=FAILURE method=LoginTest.verifyL...)</span>
-                <span class="method-start">5436 ms</span>
+                <span class="method-start">6245 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

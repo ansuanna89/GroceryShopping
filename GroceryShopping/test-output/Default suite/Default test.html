@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Sep 30 16:46:26 CEST 2025</td>
+<td>Started on:</td><td>Fri Oct 03 17:08:01 CEST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>5 seconds (5668 ms)</td>
+<tr><td>Total time:</td><td>6 seconds (6502 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -77,9 +77,13 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='testScripts.LoginTest.verifyLoginWithValidUserNameInvalidPassword()'><b>verifyLoginWithValidUserNameInvalidPassword</b><br>Test class: testScripts.LoginTest</td>
-<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.apache.poi.xssf.usermodel.XSSFRow.getCell(int)&quot; because &quot;r&quot; is null
-	at utilities.ExcelUtility.getStringData(ExcelUtility.java:24)
-	at testScripts.LoginTest.verifyLoginWithValidUserNameInvalidPassword(LoginTest.java:28)
+<td><div><pre>java.lang.AssertionError: User was able to login with Invalid credentials expected [7rmart supermarke] but found [7rmart supermarket]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at testScripts.LoginTest.verifyLoginWithValidUserNameInvalidPassword(LoginTest.java:39)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -106,10 +110,14 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1875520143", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1875520143'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.apache.poi.xssf.usermodel.XSSFRow.getCell(int)&quot; because &quot;r&quot; is null
-	at utilities.ExcelUtility.getStringData(ExcelUtility.java:24)
-	at testScripts.LoginTest.verifyLoginWithValidUserNameInvalidPassword(LoginTest.java:28)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1111710616", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1111710616'><pre>java.lang.AssertionError: User was able to login with Invalid credentials expected [7rmart supermarke] but found [7rmart supermarket]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at testScripts.LoginTest.verifyLoginWithValidUserNameInvalidPassword(LoginTest.java:39)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -137,7 +145,7 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>1</td>
+<td>2</td>
 <td>testScripts.LoginTest@128d2484</td></tr>
 </table><p>
 </body>
