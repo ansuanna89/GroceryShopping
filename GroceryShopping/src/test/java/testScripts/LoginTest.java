@@ -20,8 +20,8 @@ public class LoginTest extends TestNGBase {
 		loginPage.enterUserNameinUserNameField(usernameValue);
 		loginPage.enterPasswordOnPasswordField(passwordValue);
 		loginPage.clickSignInBtn();
-		boolean dashBoardDisplay= loginPage.isDasboardDisplayed();
-		Assert.assertTrue(dashBoardDisplay,"User was unable to login with valid credentials");
+		boolean dashBoardDisplay = loginPage.isDasboardDisplayed();
+		Assert.assertTrue(dashBoardDisplay, "User was unable to login with valid credentials");
 
 	}
 
@@ -36,7 +36,7 @@ public class LoginTest extends TestNGBase {
 		loginPage.clickSignInBtn();
 		String expected = "7rmart supermarket";
 		String actual = loginPage.isTitleDisplayed();
-		Assert.assertEquals(actual, expected,"User was able to login with Invalid credentials");
+		Assert.assertEquals(actual, expected, "User was able to login with Invalid credentials");
 	}
 
 	@Test
