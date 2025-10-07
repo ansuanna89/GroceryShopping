@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-10-06T15:38:00 CEST" name="Default suite" finished-at="2025-10-06T15:38:07 CEST" duration-ms="6732">
+  <suite started-at="2025-10-07T13:02:41 CEST" name="Default suite" finished-at="2025-10-07T13:02:47 CEST" duration-ms="5702">
     <groups>
     </groups>
-    <test started-at="2025-10-06T15:38:00 CEST" name="Default test" finished-at="2025-10-06T15:38:07 CEST" duration-ms="6732">
+    <test started-at="2025-10-07T13:02:41 CEST" name="Default test" finished-at="2025-10-07T13:02:47 CEST" duration-ms="5702">
       <class name="testScripts.AdminUserTest">
-        <test-method is-config="true" signature="initilizeBrowser()[pri:0, instance:testScripts.AdminUserTest@459e9125]" started-at="2025-10-06T15:38:01 CEST" name="initilizeBrowser" finished-at="2025-10-06T15:38:05 CEST" duration-ms="4130" status="PASS">
+        <test-method is-config="true" signature="initilizeBrowser()[pri:0, instance:testScripts.AdminUserTest@a1153bc]" started-at="2025-10-07T13:02:41 CEST" name="initilizeBrowser" finished-at="2025-10-07T13:02:44 CEST" duration-ms="2856" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initilizeBrowser -->
-        <test-method signature="validateResetOption()[pri:0, instance:testScripts.AdminUserTest@459e9125]" started-at="2025-10-06T15:38:05 CEST" name="validateResetOption" finished-at="2025-10-06T15:38:07 CEST" duration-ms="2566" status="PASS">
+        <test-method signature="validateResetOption()[pri:0, instance:testScripts.AdminUserTest@a1153bc]" started-at="2025-10-07T13:02:44 CEST" name="validateResetOption" finished-at="2025-10-07T13:02:47 CEST" duration-ms="2810" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateResetOption -->
-        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testScripts.AdminUserTest@459e9125]" started-at="2025-10-06T15:38:07 CEST" name="driverQuit" finished-at="2025-10-06T15:38:07 CEST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testScripts.AdminUserTest@a1153bc]" started-at="2025-10-07T13:02:47 CEST" name="driverQuit" finished-at="2025-10-07T13:02:47 CEST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=validateResetOption status=SUCCESS method=AdminUserTest.validateResetOption()[pri:0, instance:testScripts.AdminUserTest@459e9125] output={null}]]]>
+                <![CDATA[[TestResult name=validateResetOption status=SUCCESS method=AdminUserTest.validateResetOption()[pri:0, instance:testScripts.AdminUserTest@a1153bc] output={null}]]]>
               </value>
             </param>
           </params>

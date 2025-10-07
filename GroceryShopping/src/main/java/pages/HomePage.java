@@ -20,6 +20,8 @@ public class HomePage {
 	WebElement logOutBtn;
 	@FindBy(xpath = "//a[contains(@href,'list-admin') and contains(text(), 'More info')]")
 	WebElement adminUserMoreInfo;
+	@FindBy(xpath = "//a[contains(@href,'list-news') and text()='More info ']")
+	WebElement manageNewsMoreInfo;
 
 	public void clickProfileIcon() {
 		adminProfile.click();
@@ -31,6 +33,10 @@ public class HomePage {
 
 	public void clickAdminUsersMoreInfoSection() {
 		adminUserMoreInfo.click();
+	}
+
+	public void clickManageNewsMoreInfoSection() {
+		manageNewsMoreInfo.click();
 	}
 
 }
