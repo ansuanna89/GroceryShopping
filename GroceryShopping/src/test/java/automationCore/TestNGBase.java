@@ -5,19 +5,38 @@ import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import utilities.ScreenshotUtility;
 
 public class TestNGBase {
 	public WebDriver driver;
 
-	@BeforeMethod
-	public void initilizeBrowser() {
+	@BeforeMethod(alwaysRun=true)
+	@Parameters("browsers")
+	public void initilizeBrowser(String browsers) {
 
-		driver = new ChromeDriver();
+		if(browsers.equalsIgnoreCase("Chrome")) {
+			driver = new ChromeDriver();
+		}
+		else if(browsers.equalsIgnoreCase("Firefox")) {
+			driver= new FirefoxDriver();
+		}
+		else if(browsers.equalsIgnoreCase("Edge")) {
+		
+			WebDriverManager.edgedriver()
+			.clearResolutionCache()
+		    .forceDownload()
+		    .setup();
+			driver = new EdgeDriver();
+		}
+		
 		driver.get("https://groceryapp.uniqassosiates.com/admin/login");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
@@ -25,7 +44,7 @@ public class TestNGBase {
 
 	
 	
-	@AfterMethod
+	@AfterMethod(alwaysRun=true)
 	public void driverQuit(ITestResult iTestResult) throws IOException {
 
 		if (iTestResult.getStatus() == ITestResult.FAILURE) {
