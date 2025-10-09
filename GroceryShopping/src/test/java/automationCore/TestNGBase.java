@@ -18,42 +18,35 @@ import utilities.ScreenshotUtility;
 public class TestNGBase {
 	public WebDriver driver;
 
-	@BeforeMethod(alwaysRun=true)
+	@BeforeMethod(alwaysRun = true)
 	@Parameters("browsers")
 	public void initilizeBrowser(String browsers) {
 
-		if(browsers.equalsIgnoreCase("Chrome")) {
+		if (browsers.equalsIgnoreCase("Chrome")) {
 			driver = new ChromeDriver();
-		}
-		else if(browsers.equalsIgnoreCase("Firefox")) {
-			driver= new FirefoxDriver();
-		}
-		else if(browsers.equalsIgnoreCase("Edge")) {
-		
-			WebDriverManager.edgedriver()
-			.clearResolutionCache()
-		    .forceDownload()
-		    .setup();
+		} else if (browsers.equalsIgnoreCase("Firefox")) {
+			driver = new FirefoxDriver();
+		} else if (browsers.equalsIgnoreCase("Edge")) {
+
+			WebDriverManager.edgedriver().clearResolutionCache().forceDownload().setup();
 			driver = new EdgeDriver();
 		}
-		
+
 		driver.get("https://groceryapp.uniqassosiates.com/admin/login");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 	}
 
-	
-	
-	@AfterMethod(alwaysRun=true)
+	@AfterMethod(alwaysRun = true)
 	public void driverQuit(ITestResult iTestResult) throws IOException {
 
 		if (iTestResult.getStatus() == ITestResult.FAILURE) {
 
-		ScreenshotUtility screenShot = new ScreenshotUtility();
-		screenShot.getScreenshot(driver, iTestResult.getName());
+			ScreenshotUtility screenShot = new ScreenshotUtility();
+			screenShot.getScreenshot(driver, iTestResult.getName());
 		}
-		//driver.quit();
+		// driver.quit();
 
-		} 
+	}
 
 }

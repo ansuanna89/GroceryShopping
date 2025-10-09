@@ -8,61 +8,18 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">CrossBrowser</th></tr>
-<tr><td><a href="#t0">ChromeTest</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">6,147</td><td></td><td></td></tr>
-<tr class="stripe"><td><a href="#t1">FirefoxTest</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">6,578</td><td></td><td></td></tr>
-<tr><td><a href="#t2">EdgeTest</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">0</td><td class="num">2,551</td><td></td><td></td></tr>
-<tr><th>Total</th><th class="num">2</th><th class="num attn">1</th><th class="num">0</th><th class="num">0</th><th class="num">15,276</th><th colspan="2"></th></tr>
+<tr><th colspan="8">Multibrowser</th></tr>
+<tr><td><a href="#t0">Test1</a></td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">14,736</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">Test2</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">7,967</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">5</th><th class="num">0</th><th class="num">0</th><th class="num">0</th><th class="num">22,703</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">CrossBrowser</th></tr></tbody><tbody id="t0"><tr><th colspan="4">ChromeTest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">testScripts.HomeTest</td><td><a href="#m0">verifyLogout</a></td><td rowspan="1">1759936475865</td><td rowspan="1">2681</td></tr></tbody>
-<tbody id="t1"><tr><th colspan="4">FirefoxTest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">testScripts.HomeTest</td><td><a href="#m1">verifyLogout</a></td><td rowspan="1">1759936483502</td><td rowspan="1">1667</td></tr></tbody>
-<tbody id="t2"><tr><th colspan="4">EdgeTest &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">testScripts.HomeTest</td><td><a href="#m2">initilizeBrowser</a></td><td rowspan="1">1759936485177</td><td rowspan="1">2538</td></tr><tr><th colspan="4">EdgeTest &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">testScripts.HomeTest</td><td><a href="#m3">verifyLogout</a></td><td rowspan="1">1759936487722</td><td rowspan="1">0</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Multibrowser</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test1 &#8212; passed</th></tr><tr class="passedeven"><td rowspan="4">testScripts.LoginTest</td><td><a href="#m0">verifyLoginWithInvalidUserNameInvalidPassword</a></td><td rowspan="1">1760021342653</td><td rowspan="1">642</td></tr><tr class="passedeven"><td><a href="#m1">verifyLoginWithInvalidUserNameValidPassword</a></td><td rowspan="1">1760021339426</td><td rowspan="1">637</td></tr><tr class="passedeven"><td><a href="#m2">verifyLoginWithValidCredentials</a></td><td rowspan="1">1760021331631</td><td rowspan="1">1967</td></tr><tr class="passedeven"><td><a href="#m3">verifyLoginWithValidUserNameInvalidPassword</a></td><td rowspan="1">1760021336251</td><td rowspan="1">707</td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">Test2 &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">testScripts.HomeTest</td><td><a href="#m4">verifyLogout</a></td><td rowspan="1">1760021349715</td><td rowspan="1">1582</td></tr></tbody>
 </table>
-<h2>ChromeTest</h2><h3 id="m0">testScripts.HomeTest#verifyLogout</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>FirefoxTest</h2><h3 id="m1">testScripts.HomeTest#verifyLogout</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>EdgeTest</h2><h3 id="m2">testScripts.HomeTest#initilizeBrowser</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>Edge</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">io.github.bonigarcia.wdm.config.WebDriverManagerException: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.lang.IllegalArgumentException: URI is not absolute
-	at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1447)
-	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1210)
-	at io.github.bonigarcia.wdm.WebDriverManager.fallback(WebDriverManager.java:1463)
-	at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1441)
-	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1210)
-	at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:429)
-	at automationCore.TestNGBase.initilizeBrowser(TestNGBase.java:36)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-Caused by: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.lang.IllegalArgumentException: URI is not absolute
-	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:308)
-	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriverUrls(EdgeDriverManager.java:138)
-	at io.github.bonigarcia.wdm.WebDriverManager.createUrlHandler(WebDriverManager.java:1468)
-	at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:1298)
-	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1204)
-	... 35 more
-Caused by: java.lang.IllegalArgumentException: URI is not absolute
-	at java.base/java.net.URL.of(URL.java:862)
-	at java.base/java.net.URI.toURL(URI.java:1172)
-	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:300)
-	... 39 more
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">testScripts.HomeTest#verifyLogout</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">io.github.bonigarcia.wdm.config.WebDriverManagerException: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.lang.IllegalArgumentException: URI is not absolute
-	at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1447)
-	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1210)
-	at io.github.bonigarcia.wdm.WebDriverManager.fallback(WebDriverManager.java:1463)
-	at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1441)
-	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1210)
-	at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:429)
-	at automationCore.TestNGBase.initilizeBrowser(TestNGBase.java:36)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-Caused by: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.lang.IllegalArgumentException: URI is not absolute
-	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:308)
-	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriverUrls(EdgeDriverManager.java:138)
-	at io.github.bonigarcia.wdm.WebDriverManager.createUrlHandler(WebDriverManager.java:1468)
-	at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:1298)
-	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1204)
-	... 35 more
-Caused by: java.lang.IllegalArgumentException: URI is not absolute
-	at java.base/java.net.URL.of(URL.java:862)
-	at java.base/java.net.URI.toURL(URI.java:1172)
-	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:300)
-	... 39 more
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Test1</h2><h3 id="m0">testScripts.LoginTest#verifyLoginWithInvalidUserNameInvalidPassword</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">testScripts.LoginTest#verifyLoginWithInvalidUserNameValidPassword</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">testScripts.LoginTest#verifyLoginWithValidCredentials</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">testScripts.LoginTest#verifyLoginWithValidUserNameInvalidPassword</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Test2</h2><h3 id="m4">testScripts.HomeTest#verifyLogout</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
