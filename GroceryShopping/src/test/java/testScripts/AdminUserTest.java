@@ -15,7 +15,7 @@ import utilities.RandomDataUtility;
 
 public class AdminUserTest extends TestNGBase {
 
-	@Test
+	@Test(priority = 1,description ="Admin user is trying to create new users")
 	public void verifyNewUserCreation() throws IOException {
 
 		String usernameValue = ExcelUtility.getStringData(0, 0, "LoginPage");
@@ -50,7 +50,7 @@ public class AdminUserTest extends TestNGBase {
 
 	}
 
-	@Test
+	@Test(priority = 2, description = "Admin user is trying to search newly created user")
 	public void verifySearchAdminUsers() throws IOException {
 
 		String usernameValue = ExcelUtility.getStringData(0, 0, "LoginPage");
@@ -73,7 +73,7 @@ public class AdminUserTest extends TestNGBase {
 
 	}
 	
-	@Test
+	@Test(priority = 3, description = "Admin user is doing refresh")
 	public void validateResetOption() throws IOException {
 		
 		String usernameValue = ExcelUtility.getStringData(0, 0, "LoginPage");

@@ -11,7 +11,7 @@ import utilities.ExcelUtility;
 
 public class HomeTest extends TestNGBase {
 
-	@Test
+	@Test(priority = 1 , description = "Admin user is trying tologout from the application")
 	public void verifyLogout() throws IOException {
 
 		String usernameValue = ExcelUtility.getStringData(0, 0, "LoginPage");

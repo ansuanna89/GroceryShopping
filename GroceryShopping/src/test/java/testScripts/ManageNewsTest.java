@@ -13,7 +13,7 @@ import utilities.ExcelUtility;
 
 public class ManageNewsTest extends TestNGBase{
 	
-	@Test
+	@Test(priority = 1, description = "Validate whether the user is able to create new News")
 	public void verifyNewsCreation() throws IOException {
 		
 		String usernameValue = ExcelUtility.getStringData(0, 0, "LoginPage");
@@ -40,7 +40,7 @@ public class ManageNewsTest extends TestNGBase{
 		
 	}
 	
-	@Test
+	@Test(priority = 2, description = "Validate whether the user is able to search News")
 	public void verifyNewsSearchInManageNewsList()throws IOException {
 		
 		String usernameValue = ExcelUtility.getStringData(0, 0, "LoginPage");
