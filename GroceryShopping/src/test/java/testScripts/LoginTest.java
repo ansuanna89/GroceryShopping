@@ -1,18 +1,20 @@
 package testScripts;
 
 import java.io.IOException;
+import java.lang.invoke.ConstantBootstraps;
 
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import automationCore.TestNGBase;
+import constants.Constant;
 import pages.LoginPage;
 import utilities.ExcelUtility;
 
 public class LoginTest extends TestNGBase {
 
-	@Test(priority = 1,description = "User is trying to login with valid credentials",groups = {"smoke"})
+	@Test(priority = 1, description = "User is trying to login with valid credentials", groups = { "smoke" })
 	public void verifyLoginWithValidCredentials() throws IOException {
 
 		String usernameValue = ExcelUtility.getStringData(0, 0, "LoginPage");
@@ -22,11 +24,11 @@ public class LoginTest extends TestNGBase {
 		loginPage.enterPasswordOnPasswordField(passwordValue);
 		loginPage.clickSignInBtn();
 		boolean dashBoardDisplay = loginPage.isDasboardDisplayed();
-		Assert.assertTrue(dashBoardDisplay, "User was unable to login with valid credentials");
+		Assert.assertTrue(dashBoardDisplay, Constant.ValidCredentialError);
 
 	}
 
-	@Test(priority = 2, description = "User is trying to login with valid Username and Invalid password",retryAnalyzer = retry.Retry.class)
+	@Test(priority = 2, description = "User is trying to login with valid Username and Invalid password", retryAnalyzer = retry.Retry.class)
 	public void verifyLoginWithValidUserNameInvalidPassword() throws IOException {
 
 		String usernameValue = ExcelUtility.getStringData(11, 0, "LoginPage");
@@ -51,24 +53,26 @@ public class LoginTest extends TestNGBase {
 		loginPage.clickSignInBtn();
 	}
 
-	@Test(priority = 4,description = "User is trying to login with Invalid credentials",  groups = {"smoke"},dataProvider = "loginProvider")
-	public void verifyLoginWithInvalidUserNameInvalidPassword(String usernameValue, String passwordValue) throws IOException {
-		//String usernameValue = ExcelUtility.getStringData(3, 0, "LoginPage");
-		//String passwordValue = ExcelUtility.getStringData(3, 1, "LoginPage");
-		
-		
+	@Test(priority = 4, description = "User is trying to login with Invalid credentials", groups = {
+			"smoke" }, dataProvider = "loginProvider")
+	public void verifyLoginWithInvalidUserNameInvalidPassword(String usernameValue, String passwordValue)
+			throws IOException {
+		// String usernameValue = ExcelUtility.getStringData(3, 0, "LoginPage");
+		// String passwordValue = ExcelUtility.getStringData(3, 1, "LoginPage");
+
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.enterUserNameinUserNameField(usernameValue);
 		loginPage.enterPasswordOnPasswordField(passwordValue);
 		loginPage.clickSignInBtn();
 	}
-	 @DataProvider(name = "loginProvider")
-	 public Object[][] getDataFromDataProvider() throws IOException {
 
-	 return new Object[][] { new Object[] { "admin", "admin22" }, new Object[] { "admin123", "123" },
-	 // new Object[] {ExcelUtility.getStringData(3,
-	 // 0,"Login"),ExcelUtility.getStringData(3,1 ,"Login")}
-	 };
-	 }
+	@DataProvider(name = "loginProvider")
+	public Object[][] getDataFromDataProvider() throws IOException {
+
+		return new Object[][] { new Object[] { "admin", "admin22" }, new Object[] { "admin123", "123" },
+				// new Object[] {ExcelUtility.getStringData(3,
+				// 0,"Login"),ExcelUtility.getStringData(3,1 ,"Login")}
+		};
+	}
 
 }
