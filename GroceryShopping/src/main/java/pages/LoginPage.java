@@ -6,11 +6,13 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import utilities.PageUtility;
+import utilities.WaitUtility;
 
 public class LoginPage {
 
 	public WebDriver driver;
 	PageUtility pageutl = new PageUtility();
+	WaitUtility wait = new WaitUtility();
 
 	public LoginPage(WebDriver driver) {
 		this.driver = driver;
@@ -28,28 +30,37 @@ public class LoginPage {
 	@FindBy(xpath = "//b[text()='7rmart supermarket']")
 	WebElement loginTitle;
 
-	public void enterUserNameinUserNameField(String usernameValue) {
-		//userNameTxt.sendKeys(usernameValue);		
-		pageutl.typeText(userNameTxt, usernameValue);
+	public LoginPage enterUserNameinUserNameField(String usernameValue) {
+		userNameTxt.sendKeys(usernameValue);
+		return this;
+		
 		
 	}
 
-	public void enterPasswordOnPasswordField(String passwordValue) {
-		//passwordTxt.sendKeys(passwordValue);
-		pageutl.typeText(passwordTxt, passwordValue);
+	public LoginPage enterPasswordOnPasswordField(String passwordValue) {
+		passwordTxt.sendKeys(passwordValue);
+		return this;
+		
 	}
 
-	public void clickSignInBtn() {
+	public HomePage clickSignInBtn() {
+		
+		
+		wait.waitUntilElementToBeClickable(driver, signInBtn);
 		signInBtn.click();
+		return new HomePage(driver);
+		
 	}
 
 	public boolean isDasboardDisplayed() {
 
 		return dashBoard.isDisplayed();
+		
 	}
 
 	public String isTitleDisplayed() {
 		return loginTitle.getText();
+		
 
 	}
 }

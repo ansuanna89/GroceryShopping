@@ -21,23 +21,20 @@ public class PageUtility {
 		object.selectByValue(value);
 
 	}
+	
+	public void selectDropdownWithVisibleText(WebElement element, String value) {
+
+		Select object = new Select(element);
+		object.selectByVisibleText(value);
+
+	}
+	
 
 	/***********Basic Actions*/
 	
-	public void clickElement(WebElement element) {
-		
-		element.click();
-	}
+
 	
-	public void typeText(WebElement element,String textToEnter) {
-		element.clear();
-		element.sendKeys(textToEnter);
-	}
-	
-	public String getElementText(WebElement element) {
-		return element.getText();
-	}
-	
+
 	/*----------------------------------------------------Actions-Mouse Events------------------------------------------------------------*/
 
 	public void rightClick(WebDriver driver, WebElement element) {

@@ -10,9 +10,12 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import utilities.PageUtility;
+
 public class AdminUserPage {
 
 	public WebDriver driver;
+	PageUtility pageUtil = new PageUtility();
 
 	public AdminUserPage(WebDriver driver) {
 		this.driver = driver;
@@ -52,27 +55,35 @@ public class AdminUserPage {
 	 * Successfully')]
 	 */
 
-	public void clickNewButton() {
+	public AdminUserPage clickNewButton() {
 		newBtn.click();
+		return this;
 	}
 
-	public void enterUserNameForNewUser(String name) {
+	public AdminUserPage enterUserNameForNewUser(String name) {
 		userNameField.clear();
 		userNameField.sendKeys(name);
+		return this;
 	}
 
-	public void enterPasswordForNewUser(String password) {
+	public AdminUserPage enterPasswordForNewUser(String password) {
 		passwordField.clear();
 		passwordField.sendKeys(password);
+		return this;
 	}
 
-	public void chooseUserType(String uType) {
-		Select sel = new Select(userType);
-		sel.selectByVisibleText(uType);
+	public AdminUserPage chooseUserType(String uType) {
+		
+		
+		pageUtil.selectDropdownWithValue(userType, uType);
+		return this;
+		//Select sel = new Select(userType);
+		//sel.selectByVisibleText(uType);
 	}
 
-	public void clickSaveBtn() {
+	public AdminUserPage clickSaveBtn() {
 		saveBtn.click();
+		return this;
 	}
 
 	public boolean isUserCreationSuccessAlertDisplayed() {
@@ -86,35 +97,42 @@ public class AdminUserPage {
 
 	}
 
-	public void clickSearchBtn() {
+	public AdminUserPage clickSearchBtn() {
 		searchBtn.click();
+		return this;
 	}
 
-	public void enterUsernameInSearchUsernameField(String name) {
+	public AdminUserPage enterUsernameInSearchUsernameField(String name) {
 		userNameSearch.sendKeys(name);
+		return this;
 
 	}
 
-	public void selectUserTypeForSearch(String uType) {
+	public AdminUserPage selectUserTypeForSearch(String uType) {
 
-		Select sel = new Select(userTypeSearch);
-		sel.selectByVisibleText(uType);
+		pageUtil.selectDropdownWithVisibleText(userTypeSearch, uType);
+		//Select sel = new Select(userTypeSearch);
+		//sel.selectByVisibleText(uType);	
+		return this;
 	}
 
-	public void clickBtnSearchAdminUser() {
+	public AdminUserPage clickBtnSearchAdminUser() {
 		searchAdminUser.click();
+		return this;
 	}
 
 	public String isUserListed() {
 		return searchResultTable.getText();
 	}
 
-	public void clickOnResetBtn() {
+	public AdminUserPage clickOnResetBtn() {
 		resetBtnlink.click();
+		return this;
 	}
 	
-	public void clickResetButtn() {
+	public AdminUserPage clickResetButtn() {
 		resetBtn.click();
+		return this;
 	}
 	
 	public boolean isAdminUserInfoHeaderDisplayed() {

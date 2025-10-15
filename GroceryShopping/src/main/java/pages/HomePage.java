@@ -23,20 +23,26 @@ public class HomePage {
 	@FindBy(xpath = "//a[contains(@href,'list-news') and text()='More info ']")
 	WebElement manageNewsMoreInfo;
 
-	public void clickProfileIcon() {
+	public HomePage clickProfileIcon() {
 		adminProfile.click();
+		return this;
 	}
 
-	public void clickLogOutBtn() {
+	public LoginPage clickLogOutBtn() {
 		logOutBtn.click();
+		return new LoginPage(driver);
+		
 	}
 
-	public void clickAdminUsersMoreInfoSection() {
+	public AdminUserPage clickAdminUsersMoreInfoSection() {
 		adminUserMoreInfo.click();
+		return new AdminUserPage(driver);
 	}
 
-	public void clickManageNewsMoreInfoSection() {
+	public ManageNewsPage clickManageNewsMoreInfoSection() {
 		manageNewsMoreInfo.click();
+		return new ManageNewsPage(driver);
+		
 	}
 
 }
