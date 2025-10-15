@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/0/1</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Oct 08 17:14:45 CEST 2025</td>
+<td>Started on:</td><td>Wed Oct 15 12:55:50 CEST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>2 seconds (2551 ms)</td>
+<tr><td>Total time:</td><td>0 seconds (5 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -77,36 +77,20 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='testScripts.HomeTest.initilizeBrowser()'><b>initilizeBrowser</b><br>Test class: testScripts.HomeTest<br>Parameters: Edge</td>
-<td><div><pre>io.github.bonigarcia.wdm.config.WebDriverManagerException: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.lang.IllegalArgumentException: URI is not absolute
-	at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1447)
-	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1210)
-	at io.github.bonigarcia.wdm.WebDriverManager.fallback(WebDriverManager.java:1463)
-	at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1441)
-	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1210)
-	at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:429)
-	at automationCore.TestNGBase.initilizeBrowser(TestNGBase.java:36)
+<td><div><pre>java.io.FileNotFoundException: C:\Users\mathe\git\GroceryShopping\GroceryShoppingsrc\main\resources\config.properties (The system cannot find the path specified)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:213)
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:152)
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:106)
+	at automationCore.TestNGBase.initilizeBrowser(TestNGBase.java:32)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-Caused by: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.lang.IllegalArgumentException: URI is not absolute
-	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:308)
-	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriverUrls(EdgeDriverManager.java:138)
-	at io.github.bonigarcia.wdm.WebDriverManager.createUrlHandler(WebDriverManager.java:1468)
-	at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:1298)
-	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1204)
-	... 35 more
-Caused by: java.lang.IllegalArgumentException: URI is not absolute
-	at java.base/java.net.URL.of(URL.java:862)
-	at java.base/java.net.URI.toURL(URI.java:1172)
-	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:300)
-	... 39 more
-... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1070740013", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1070740013'><pre>io.github.bonigarcia.wdm.config.WebDriverManagerException: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.lang.IllegalArgumentException: URI is not absolute
-	at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1447)
-	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1210)
-	at io.github.bonigarcia.wdm.WebDriverManager.fallback(WebDriverManager.java:1463)
-	at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1441)
-	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1210)
-	at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:429)
-	at automationCore.TestNGBase.initilizeBrowser(TestNGBase.java:36)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace977552154", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace977552154'><pre>java.io.FileNotFoundException: C:\Users\mathe\git\GroceryShopping\GroceryShoppingsrc\main\resources\config.properties (The system cannot find the path specified)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:213)
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:152)
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:106)
+	at automationCore.TestNGBase.initilizeBrowser(TestNGBase.java:32)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -137,21 +121,9 @@ Caused by: java.lang.IllegalArgumentException: URI is not absolute
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.lang.IllegalArgumentException: URI is not absolute
-	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:308)
-	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriverUrls(EdgeDriverManager.java:138)
-	at io.github.bonigarcia.wdm.WebDriverManager.createUrlHandler(WebDriverManager.java:1468)
-	at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:1298)
-	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1204)
-	... 35 more
-Caused by: java.lang.IllegalArgumentException: URI is not absolute
-	at java.base/java.net.URL.of(URL.java:862)
-	at java.base/java.net.URI.toURL(URI.java:1172)
-	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:300)
-	... 39 more
 </pre></div></td>
-<td>2</td>
-<td>testScripts.HomeTest@37ceb1df</td></tr>
+<td>0</td>
+<td>testScripts.HomeTest@58a9760d</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
@@ -162,37 +134,21 @@ Caused by: java.lang.IllegalArgumentException: URI is not absolute
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testScripts.HomeTest.verifyLogout()'><b>verifyLogout</b><br>Test class: testScripts.HomeTest</td>
-<td><div><pre>io.github.bonigarcia.wdm.config.WebDriverManagerException: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.lang.IllegalArgumentException: URI is not absolute
-	at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1447)
-	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1210)
-	at io.github.bonigarcia.wdm.WebDriverManager.fallback(WebDriverManager.java:1463)
-	at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1441)
-	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1210)
-	at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:429)
-	at automationCore.TestNGBase.initilizeBrowser(TestNGBase.java:36)
+<td title='testScripts.HomeTest.verifyLogout()'><b>verifyLogout</b><br>Test class: testScripts.HomeTest<br>Test method: Admin user is trying tologout from the application</td>
+<td><div><pre>java.io.FileNotFoundException: C:\Users\mathe\git\GroceryShopping\GroceryShoppingsrc\main\resources\config.properties (The system cannot find the path specified)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:213)
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:152)
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:106)
+	at automationCore.TestNGBase.initilizeBrowser(TestNGBase.java:32)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-Caused by: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.lang.IllegalArgumentException: URI is not absolute
-	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:308)
-	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriverUrls(EdgeDriverManager.java:138)
-	at io.github.bonigarcia.wdm.WebDriverManager.createUrlHandler(WebDriverManager.java:1468)
-	at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:1298)
-	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1204)
-	... 35 more
-Caused by: java.lang.IllegalArgumentException: URI is not absolute
-	at java.base/java.net.URL.of(URL.java:862)
-	at java.base/java.net.URI.toURL(URI.java:1172)
-	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:300)
-	... 39 more
-... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1742633625", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1742633625'><pre>io.github.bonigarcia.wdm.config.WebDriverManagerException: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.lang.IllegalArgumentException: URI is not absolute
-	at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1447)
-	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1210)
-	at io.github.bonigarcia.wdm.WebDriverManager.fallback(WebDriverManager.java:1463)
-	at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1441)
-	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1210)
-	at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:429)
-	at automationCore.TestNGBase.initilizeBrowser(TestNGBase.java:36)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace390689829", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace390689829'><pre>java.io.FileNotFoundException: C:\Users\mathe\git\GroceryShopping\GroceryShoppingsrc\main\resources\config.properties (The system cannot find the path specified)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:213)
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:152)
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:106)
+	at automationCore.TestNGBase.initilizeBrowser(TestNGBase.java:32)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -223,21 +179,9 @@ Caused by: java.lang.IllegalArgumentException: URI is not absolute
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.lang.IllegalArgumentException: URI is not absolute
-	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:308)
-	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriverUrls(EdgeDriverManager.java:138)
-	at io.github.bonigarcia.wdm.WebDriverManager.createUrlHandler(WebDriverManager.java:1468)
-	at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:1298)
-	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1204)
-	... 35 more
-Caused by: java.lang.IllegalArgumentException: URI is not absolute
-	at java.base/java.net.URL.of(URL.java:862)
-	at java.base/java.net.URI.toURL(URI.java:1172)
-	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:300)
-	... 39 more
 </pre></div></td>
 <td>0</td>
-<td>testScripts.HomeTest@37ceb1df</td></tr>
+<td>testScripts.HomeTest@58a9760d</td></tr>
 </table><p>
 </body>
 </html>

@@ -1,7 +1,7 @@
 package testScripts;
 
 import java.io.IOException;
-import java.lang.invoke.ConstantBootstraps;
+
 
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
@@ -39,7 +39,7 @@ public class LoginTest extends TestNGBase {
 		loginPage.clickSignInBtn();
 		String expected = "7rmart supermarket";
 		String actual = loginPage.isTitleDisplayed();
-		Assert.assertEquals(actual, expected, "User was able to login with Invalid credentials");
+		Assert.assertEquals(actual, expected, Constant.InvalidPasswordError);
 	}
 
 	@Test(priority = 3, description = "User is trying to login with Invalid Username and Valid Password")
@@ -51,6 +51,10 @@ public class LoginTest extends TestNGBase {
 		loginPage.enterUserNameinUserNameField(usernameValue);
 		loginPage.enterPasswordOnPasswordField(passwordValue);
 		loginPage.clickSignInBtn();
+		String expected = "7rmart supermarket";
+		String actual = loginPage.isTitleDisplayed();
+		Assert.assertEquals(actual, expected, Constant.InvalidUserNameError);
+		
 	}
 
 	@Test(priority = 4, description = "User is trying to login with Invalid credentials", groups = {
@@ -64,6 +68,10 @@ public class LoginTest extends TestNGBase {
 		loginPage.enterUserNameinUserNameField(usernameValue);
 		loginPage.enterPasswordOnPasswordField(passwordValue);
 		loginPage.clickSignInBtn();
+		
+		String expected = "7rmart supermarket";
+		String actual = loginPage.isTitleDisplayed();
+		Assert.assertEquals(actual, expected, Constant.InvalidCredentialError);
 	}
 
 	@DataProvider(name = "loginProvider")

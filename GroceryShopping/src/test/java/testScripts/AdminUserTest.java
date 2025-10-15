@@ -7,6 +7,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import automationCore.TestNGBase;
+import constants.Constant;
 import pages.AdminUserPage;
 import pages.HomePage;
 import pages.LoginPage;
@@ -38,13 +39,13 @@ public class AdminUserTest extends TestNGBase {
 		adminUserPage.chooseUserType(newUser_Type);
 		adminUserPage.clickSaveBtn();
 		boolean usercreatedAlert = adminUserPage.isUserCreationSuccessAlertDisplayed();
-		Assert.assertTrue(usercreatedAlert, newUser_Name + ": Unable to create New User!!");
+		Assert.assertTrue(usercreatedAlert, newUser_Name + Constant.UnableToCreateUser);
 
 		
 		 String expected = "User Created Successfully"; 
 		 String actual = adminUserPage.validateUserCreationSuccessMessage();
 		 System.out.println(actual.contains(expected));
-		 Assert.assertTrue(actual.contains(expected), "Unable to create new user");
+		 Assert.assertTrue(actual.contains(expected), Constant.UnableToCreateUser);
 		 
 		 
 
@@ -69,7 +70,7 @@ public class AdminUserTest extends TestNGBase {
 		adminUserPage.selectUserTypeForSearch(userTypeToSearch);
 		adminUserPage.clickBtnSearchAdminUser();
 		String actual = adminUserPage.isUserListed();
-		Assert.assertEquals(actual, userToSearch, "Searched User is not available in the System!!");
+		Assert.assertEquals(actual, userToSearch, Constant.SearchedUserNotAvailable);
 
 	}
 	
@@ -89,7 +90,7 @@ public class AdminUserTest extends TestNGBase {
 		adminUserPage.clickNewButton();
 		adminUserPage.clickResetButtn();
 		boolean userInfoHeaderOnReset = adminUserPage.isAdminUserInfoHeaderDisplayed();
-		Assert.assertFalse(userInfoHeaderOnReset, "Admin User Information header is still displayed, Reset is not happening properly");
+		Assert.assertFalse(userInfoHeaderOnReset, Constant.ResetNotHappened);
 		
 	}
 

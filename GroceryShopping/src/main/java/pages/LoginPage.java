@@ -5,9 +5,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import utilities.PageUtility;
+
 public class LoginPage {
 
 	public WebDriver driver;
+	PageUtility pageutl = new PageUtility();
 
 	public LoginPage(WebDriver driver) {
 		this.driver = driver;
@@ -26,11 +29,14 @@ public class LoginPage {
 	WebElement loginTitle;
 
 	public void enterUserNameinUserNameField(String usernameValue) {
-		userNameTxt.sendKeys(usernameValue);
+		//userNameTxt.sendKeys(usernameValue);		
+		pageutl.typeText(userNameTxt, usernameValue);
+		
 	}
 
 	public void enterPasswordOnPasswordField(String passwordValue) {
-		passwordTxt.sendKeys(passwordValue);
+		//passwordTxt.sendKeys(passwordValue);
+		pageutl.typeText(passwordTxt, passwordValue);
 	}
 
 	public void clickSignInBtn() {
