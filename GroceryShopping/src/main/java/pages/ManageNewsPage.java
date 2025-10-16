@@ -36,16 +36,19 @@ public class ManageNewsPage {
 	@FindBy(xpath = "//tr[1]/td[1]")
 	WebElement searchResultTableRow;
 
-	public void clickNewBtnForNewsCreation() {
+	public ManageNewsPage clickNewBtnForNewsCreation() {
 		newBtn.click();
+		return this;
 	}
 
-	public void enterTextInNewsInputField(String news) {
+	public ManageNewsPage enterTextInNewsInputField(String news) {
 		newsTextArea.sendKeys(news);
+		return this;
 	}
 
-	public void clickSaveBtn() {
+	public ManageNewsPage clickSaveBtn() {
 		saveBtn.click();
+		return this;
 	}
 
 	public boolean isNewsCreationSuccessAlertDisplayed() {
@@ -58,16 +61,19 @@ public class ManageNewsPage {
 		return newsCreatedSuccessAlert.getText();
 	}
 
-	public void clickSearchBtn() {
+	public ManageNewsPage clickSearchBtn() {
 		searchBtnLink.click();
+		return this;
 	}
 
-	public void enterSeacrhTextOnSearchTextBox(String news) {
+	public ManageNewsPage enterSeacrhTextOnSearchTextBox(String news) {
 		searchTextInputField.sendKeys(news);
+		return this;
 	}
 
-	public void clickSearchBtnInManageNewsSearchSection() {
+	public ManageNewsPage clickSearchBtnInManageNewsSearchSection() {
 		searchBtn.click();
+		return this;
 	}
 
 	public String getDataFromSearchRsultandValidate() {

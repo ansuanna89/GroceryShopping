@@ -21,4 +21,10 @@ public class Constant {
 	public static final String SearchedUserNotAvailable ="Searched User is not available in the System!!";
 	
 	public static final String ResetNotHappened ="Admin User Information header is still displayed, Reset is not happening properly";
+	
+	public static final String NewsNotCreated ="Unable to create new News, News Success Message is not Displayed!!";
+	
+	public static final String NewsCreatedSuccessBannerNotDisplayed ="The message 'News Created Successfully' is not displayed !!";
+	
+	public static final String NewsSearchIsNotWorking ="Search Results are not matching!!!";
 }
