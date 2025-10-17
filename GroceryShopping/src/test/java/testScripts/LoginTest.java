@@ -32,7 +32,8 @@ public class LoginTest extends TestNGBase {
 	@Test(priority = 2, description = "User is trying to login with valid Username and Invalid password", retryAnalyzer = retry.Retry.class)
 	public void verifyLoginWithValidUserNameInvalidPassword() throws IOException {
 
-		String usernameValue = ExcelUtility.getStringData(11, 0, "LoginPage");
+		//String usernameValue = ExcelUtility.getStringData(11, 0, "LoginPage");	//For Retry
+		String usernameValue = ExcelUtility.getStringData(1, 0, "LoginPage");
 		String passwordValue = ExcelUtility.getStringData(1, 1, "LoginPage");
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.enterUserNameinUserNameField(usernameValue).enterPasswordOnPasswordField(passwordValue).clickSignInBtn();

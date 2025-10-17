@@ -110,7 +110,8 @@ public class AdminUserPage {
 
 	public AdminUserPage selectUserTypeForSearch(String uType) {
 
-		pageUtil.selectDropdownWithVisibleText(userTypeSearch, uType);
+		//pageUtil.selectDropdownWithVisibleText(userTypeSearch, uType);
+		pageUtil.selectDropdownWithValue(userTypeSearch, uType);
 		//Select sel = new Select(userTypeSearch);
 		//sel.selectByVisibleText(uType);	
 		return this;

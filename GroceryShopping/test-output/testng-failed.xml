@@ -7,13 +7,6 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="testScripts.AdminUserTest">
-        <methods>
-          <include name="driverQuit"/>
-          <include name="initilizeBrowser"/>
-          <include name="verifyNewUserCreation"/>
-        </methods>
-      </class> <!-- testScripts.AdminUserTest -->
       <class name="testScripts.LoginTest">
         <methods>
           <include name="verifyLoginWithValidUserNameInvalidPassword"/>
