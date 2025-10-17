@@ -11,14 +11,21 @@
 
 	<test thread-count="5" name="Test">
 		<classes>
-		
-	
-			<class name="testScripts.LoginTest"></class>
+
+
+			<class name="testScripts.LoginTest">
+				<methods>
+					<include name="verifyLoginWithValidCredentials"></include>
+				</methods>
+			</class>
+			<class name="testScripts.AdminUserTest"></class>
+			<class name="testScripts.HomeTest"></class>
+			<!-- 
 			<class name="testScripts.AdminUserTest"></class>
 			<class name="testScripts.HomeTest"></class>
 			<class name="testScripts.ManageNewsTest"></class>
-		
-			 	<!--
+			-->
+			<!--
 			<class name="testScripts.AdminUserTest">
 				<methods>					
 					 <include name="verifySearchAdminUsers"></include>					
