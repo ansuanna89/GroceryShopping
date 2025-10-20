@@ -2,6 +2,7 @@ package pages;
 
 import java.time.Duration;
 
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -124,9 +125,18 @@ public class AdminUserPage {
 	}
 
 	public String isUserListed() {
-			
-		wait.waitUntilVisibilityOfElement(driver, searchResultTable);
-		return searchResultTable.getText();
+		
+		final int MAX_ATTEMPTS = 3;
+		for (int attempt = 0; attempt < MAX_ATTEMPTS; attempt++) {
+			try {
+					wait.waitUntilVisibilityOfElement(driver, searchResultTable);
+					return searchResultTable.getText();
+			} catch (StaleElementReferenceException e) {				
+				System.out.println("Stale element caught. Retrying... Attempt " + (attempt + 1));
+			}
+		}
+		throw new RuntimeException(
+				"Failed to get data after " + MAX_ATTEMPTS + " attempts due to StaleElementReferenceException.");
 	}
 
 	public AdminUserPage clickOnResetBtn() {
