@@ -1,5 +1,6 @@
 package pages;
 
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -33,34 +34,43 @@ public class LoginPage {
 	public LoginPage enterUserNameinUserNameField(String usernameValue) {
 		userNameTxt.sendKeys(usernameValue);
 		return this;
-		
-		
+
 	}
 
 	public LoginPage enterPasswordOnPasswordField(String passwordValue) {
 		passwordTxt.sendKeys(passwordValue);
 		return this;
-		
+
 	}
 
 	public HomePage clickSignInBtn() {
-		
-		
+
 		wait.waitUntilElementToBeClickable(driver, signInBtn);
 		signInBtn.click();
 		return new HomePage(driver);
-		
+
 	}
 
 	public boolean isDasboardDisplayed() {
 
 		return dashBoard.isDisplayed();
-		
+
 	}
 
 	public String isTitleDisplayed() {
-		return loginTitle.getText();
-		
+
+		final int MAX_ATTEMPTS = 3;
+		for (int attempt = 0; attempt < MAX_ATTEMPTS; attempt++) {
+			try {
+				wait.waitUntilVisibilityOfElement(driver, loginTitle);
+				return loginTitle.getText();
+			} 
+			catch (StaleElementReferenceException e) {
+				System.out.println("Stale element caught. Retrying... Attempt " + (attempt + 1));
+			}
+		}
+		throw new RuntimeException(
+				"Failed to get data after " + MAX_ATTEMPTS + " attempts due to StaleElementReferenceException.");
 
 	}
 }
