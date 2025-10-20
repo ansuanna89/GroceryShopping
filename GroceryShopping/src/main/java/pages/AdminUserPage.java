@@ -11,12 +11,13 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import utilities.PageUtility;
+import utilities.WaitUtility;
 
 public class AdminUserPage {
 
 	public WebDriver driver;
 	PageUtility pageUtil = new PageUtility();
-
+	WaitUtility wait = new WaitUtility();
 	public AdminUserPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
@@ -123,6 +124,8 @@ public class AdminUserPage {
 	}
 
 	public String isUserListed() {
+			
+		wait.waitUntilVisibilityOfElement(driver, searchResultTable);
 		return searchResultTable.getText();
 	}
 

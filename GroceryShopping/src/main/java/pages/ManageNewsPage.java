@@ -9,9 +9,12 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import utilities.WaitUtility;
+
 public class ManageNewsPage {
 
 	public WebDriver driver;
+	WaitUtility wait = new WaitUtility();
 
 	public ManageNewsPage(WebDriver driver) {
 
@@ -77,6 +80,7 @@ public class ManageNewsPage {
 	}
 
 	public String getDataFromSearchRsultandValidate() {
+		wait.waitUntilVisibilityOfElement(driver, searchResultTableRow);
 		return searchResultTableRow.getText();
 	}
 
