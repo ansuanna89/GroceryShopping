@@ -20,11 +20,13 @@
 			</class>
 			<class name="testScripts.AdminUserTest"></class>
 			<class name="testScripts.HomeTest"></class>
-			<!-- 
 			<class name="testScripts.AdminUserTest"></class>
 			<class name="testScripts.HomeTest"></class>
 			<class name="testScripts.ManageNewsTest"></class>
-			-->
+			
+			
+			
+			
 			<!--
 			<class name="testScripts.AdminUserTest">
 				<methods>					
