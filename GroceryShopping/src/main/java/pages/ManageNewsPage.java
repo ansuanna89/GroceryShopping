@@ -2,6 +2,7 @@ package pages;
 
 import java.time.Duration;
 
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -80,8 +81,24 @@ public class ManageNewsPage {
 	}
 
 	public String getDataFromSearchRsultandValidate() {
-		wait.waitUntilVisibilityOfElement(driver, searchResultTableRow);
-		return searchResultTableRow.getText();
+
+		final int MAX_ATTEMPTS = 3;
+		for (int attempt = 0; attempt < MAX_ATTEMPTS; attempt++) {
+			try {
+				
+				wait.waitUntilVisibilityOfElement(driver, searchResultTableRow);
+				return searchResultTableRow.getText();
+				
+			} catch (StaleElementReferenceException e) {
+				// Log this and continue the loop to retry
+				System.out.println("Stale element caught. Retrying... Attempt " + (attempt + 1));
+				// The next loop iteration will implicitly trigger a re-find via the
+				// PageFactory/proxy
+			}
+		}
+		// If we exit the loop, all attempts failed
+		throw new RuntimeException(
+				"Failed to get data after " + MAX_ATTEMPTS + " attempts due to StaleElementReferenceException.");
 	}
 
 }
